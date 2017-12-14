@@ -1,7 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #define N 20
 #define M 30
-#define _CRT_SECURE_NO_WARNINGS
+
 
 int main()
 {

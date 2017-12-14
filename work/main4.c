@@ -1,8 +1,10 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "task4.h"
 #include <string.h>
-#define _CRT_SECURE_NO_WARNINGS
+
 #define N 20
 #define M 100
 
