@@ -19,7 +19,8 @@ int main()
 	}
 	lineSort(str, i);// function for sort of line
 	printLinesToFile(str, i, fpFinal);//function for print
-	fcloseall();
+	fclose(fp);
+	fclose(fpFinal);
 	return 0;
 }
 
