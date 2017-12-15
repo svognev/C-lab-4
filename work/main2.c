@@ -7,7 +7,7 @@ int main()
 	char in[SIZE] = {0};
 	char *out[SIZE] = {0};
 	printf("Enter line of word:\n");
-	gets(in, SIZE, stdin);//record string in array
+	fgets(in, sizeof(in), stdin);//record string in array
 	reverseWords(in, out);// rewerse of words
 	while (out[j]!= NULL)//print result
 	{
