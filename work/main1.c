@@ -25,7 +25,7 @@ int main()
 		i++;
 	}
 
-	
+	//
 	lineSort(p, i);
 	printLines(p,i );
 	return 0;
