@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "task1.h"
+#include "task4.h"
 #include <time.h>
 
 
