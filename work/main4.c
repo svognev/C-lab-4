@@ -25,7 +25,6 @@ int main()
 	fclose(fp);
 	buf[count-1][strlen(buf[count - 1])]='\n';
 	lineSort(pstr, count);
-
 	fp = fopen("outputSort.txt", "wt");
 	if (fp == NULL)
 	{

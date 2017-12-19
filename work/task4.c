@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "task1.c"
 
 /*int sort(const void *a, const void *b)
 {
