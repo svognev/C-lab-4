@@ -1,3 +1,4 @@
+#include "task1.c"
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -25,8 +26,8 @@ int main()
 		i++;
 	}
 
-	//
+	
 	lineSort(p, i);
-	printLines(p,i );
+	printLines((const)p,i );
 	return 0;
 }
