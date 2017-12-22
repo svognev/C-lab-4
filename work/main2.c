@@ -5,18 +5,12 @@ int main()
 {
 	int i = 0, j = 0,size=0;
 	char in[SIZE] = {0};
-	char *out[SIZE] = {0};
+	char out[SIZE] = {0};
 	printf("Enter line of word:\n");
 	fgets(in, sizeof(in), stdin);//record string in array
 	reverseWords(in, out);// rewerse of words
-	while (out[j]!= NULL)//print result
-	{
-		fputs(out[j], stdout);
-		fputs(" ", stdout);
-		j++;
-	}
-	size = j - 1;
-	fputs("\n", stdout);
+	printf("%s\n",out);
+	
 		
 	return 0;
 }
