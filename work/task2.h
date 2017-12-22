@@ -3,4 +3,4 @@
 #define SIZE 100 
 #include<stdio.h>
 #include<stdlib.h>
-char *reverseWords(char * in, char *out[SIZE]);
+char *reverseWords(char *in, char *out);

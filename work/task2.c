@@ -4,7 +4,7 @@
 #include<string.h>
 #define OUT 0
 #define IN 1
-char *reverseWords(char in[SIZE], char out[SIZE])
+char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
 	char *p[SIZE];
