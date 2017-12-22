@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
-#define N 25
-#define M 80
+#define N_5 25
+#define M_5 80
 
-static void clean_stdin(void)
+void clean_stdin(void)
 {
 	int c;
 	do
@@ -16,15 +16,15 @@ static void clean_stdin(void)
 
 int main()
 {
-	char names[N][M] = { '\0' };
+	char names[N_5][M_5] = { '\0' };
 	char *young = NULL, *old = NULL;
 	int currAge = 0, maxAge = INT_MIN, minAge = INT_MAX;
 	int numRel = 0, i = 0;
 
 	printf("Enter num of relatives: ");
 	scanf("%d", &numRel);
-	if (numRel > N)
-		numRel = N;
+	if (numRel > N_5)
+		numRel = N_5;
 	putchar('\n');
 
 	while (i < numRel)
@@ -34,7 +34,7 @@ int main()
 		scanf("%d", &currAge);
 		clean_stdin();
 		printf("Enter name: ");
-		fgets(names[i], M, stdin);
+		fgets(names[i], M_5, stdin);
 
 		if (currAge > maxAge)
 		{

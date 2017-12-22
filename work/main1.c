@@ -3,18 +3,18 @@
 #include <string.h>
 #include <stdlib.h>
 #include "task1.h"
-#define N 25
-#define M 80
+#define N_1 25
+#define M_1 80
 
 int main()
 {
-	char text[N][M] = { '\0' };
-	char *str[N] = { NULL };
+	char text[N_1][M_1] = { '\0' };
+	char *str[N_1] = { NULL };
 	int count = 0;
 
 	printf("Enter your lines:\n");
 
-	while ((count < N) && (*fgets(text[count], M, stdin) != '\n'))
+	while ((count < N_1) && (*fgets(text[count], M_1, stdin) != '\n'))
 		str[count] = text[count++];
 
 	lineSort(str, count);
