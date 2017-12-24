@@ -1,54 +1,57 @@
+#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include "task2.h"
 
 char * reverseWords(char *in, char *out)
 {
-	char *words[SIZE2] = { NULL };
-	char *out_text = out;
-	char *s = NULL;
-	
-	int i = 0, inWord = 0, count = 0;
-
-	while (in[i])
+	char *pstr[SIZE2] = { NULL };
+	int n = 0;
+	int count = 0;
+	int k = 0;
+	if (!isspace(in[count]))
 	{
-		if (in[i] != ' ' && inWord == 0)
-		{
-			inWord = 1;
-			words[count] = &(in[i]);
-			if (in[i + 1] == '\0')
-			{
-				inWord = 0;
-				count++;
-				break;
-			}
-		}
-		else if (in[i] == ' ' && inWord == 1)
-		{
-			inWord = 0;
-			count++;
-		}
-		else if (in[i] != ' ' && inWord == 1)
-		{
-			if (in[i + 1] == '\0')
-			{
-				inWord = 0;
-				count++;
-				break;
-			}
-		}
-		i++;
+		pstr[k++] = &in[count++];
+		n++;
 	}
 
-	for (i = count - 1; i >= 0; i--)
+
+	while (in[count] != '\0')
 	{
-		s = words[i];
-		while (*s != ' ' && *s != '\0')
-			*out_text++ = *s++;
+		if (!isspace(in[count]) && isspace(in[count - 1]))
+		{
+			pstr[k] = &in[count];
+			//printf("%c  ", *pstr[k]);
+			k++;
+			n++;
+		}
+		count++;
+	}
+	//printf("\n");
+
+	int j = 0;
+	int sm;  //смещение по строке in
+	char s;
+	for (int i = n - 1; i >= 0; i--)
+	{
+		sm = 0;
+
+		for (; !isspace(*(pstr[i] + sm)) && *(pstr[i] + sm) != '\0'; sm++, j++)
+		{
+			//printf("%d ", sm);
+			s = *(pstr[i] + sm);
+			//printf("%c ", s);
+			out[j] = s;
+		}
+		//printf("%d ", sm);
+		//puts(out);
 		if (i > 0)
-			*out_text++ = ' ';
-	}
-	*out_text = '\0';
+			out[j++] = ' ';
 
+
+	}
+	//printf("\n");
+
+	out[j++] = '\0';
 	return out;
 }
