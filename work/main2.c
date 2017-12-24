@@ -11,6 +11,7 @@ int main()
 	char final[SIZE] = { 0 };
 	printf("Enter a string:\n");
 	fgets(str, SIZE, stdin);
+
 	printf("%s\n", reverseWords(str, final));
 	return 0;
 

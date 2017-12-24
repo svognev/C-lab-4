@@ -11,8 +11,12 @@ char * reverseWords(char * in, char *out)
 	int i = 0;
 	char* arrPtr[N] = { 0 };
 	int size = strlen(in);
-	in[size - 1] = ' ';
-	in[size]= '\0';
+	if (in[size-1] == '\n')
+	{
+		//in[size - 1] = ' ';
+		in[size-1] = '\0';
+	}
+	
 
 	while (*in)
 	{
@@ -30,6 +34,8 @@ char * reverseWords(char * in, char *out)
 	{
 		while (*arrPtr[count] != ' ')
 		{
+			if (*arrPtr[count] == '\0')
+				break;
 			*(out+i) = *arrPtr[count];
 			i++;
 			*(arrPtr[count]++);
