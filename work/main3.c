@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "task3.h"
-#define SIZE 50
+//#define SIZE 50
 #include<string.h>
 int main()
 {
