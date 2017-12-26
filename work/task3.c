@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include "task3.h"
-int isPalindrome(char * str)
+int isPalindrome(char *str)
 {
 	int len,j,i=0,flag=OUT;
 	len = strlen(str);
