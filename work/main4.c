@@ -18,7 +18,7 @@ int main()
 		i++;
 	}
 	lineSort(str, i);// function for sort of line
-	printLinesToFile((const)str, i, fpFinal);//function for print
+	printLinesToFile(str, i, fpFinal);//function for print
 	fclose(fp);
 	fclose(fpFinal);
 	return 0;
