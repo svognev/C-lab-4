@@ -1,7 +1,11 @@
 #include "task4.h"
+<<<<<<< HEAD
 #define SIZE 250
+=======
+//#define SIZE 50
+>>>>>>> b31eb49c9a802bb5d433089fd86577705a0cea4f
 #define M 200
-#include<stdio.h>
+//#include<stdio.h>
 int main()
 {
 	int i = 0,size=0;
@@ -19,7 +23,7 @@ int main()
 		i++;
 	}
 	lineSort(str, i);// function for sort of line
-	printLinesToFile(str, i, fpFinal);//function for print
+	printLinesToFile((const)str, i, fpFinal);//function for print
 	fclose(fp);
 	fclose(fpFinal);
 	return 0;

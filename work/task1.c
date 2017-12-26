@@ -14,7 +14,7 @@ void compare(const void *a,const void *b)
 }
 void lineSort(char *str[], int size)
 {
-	qsort(str, size,sizeof(str), compare);//base functi0n quick sort
+	qsort(str, size,sizeof(*str), compare);//base functi0n quick sort
 }
 void printLines(const char *str[], int size)
 {
