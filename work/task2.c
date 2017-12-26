@@ -58,8 +58,3 @@ char *reverseWords(char *in, char *out)
 	
 	return out;
 }
-void printLines(const char str[SIZE], int size)
-{
-	
-
-}
