@@ -1,5 +1,6 @@
 #include "task4.h"
 #define M 200
+#define SIZE 150
 //#include<stdio.h>
 int main()
 {
