@@ -1,9 +1,4 @@
 #include "task4.h"
-<<<<<<< HEAD
-#define SIZE 250
-=======
-//#define SIZE 50
->>>>>>> b31eb49c9a802bb5d433089fd86577705a0cea4f
 #define M 200
 //#include<stdio.h>
 int main()

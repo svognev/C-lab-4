@@ -8,6 +8,7 @@
 #define SIZE 220
 int main()
 {
+
 	int i = 0,j=0,countN=0;
 	int flagEnt = OUT;// flag end of entered lines
 	char ch;
