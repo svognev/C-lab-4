@@ -14,8 +14,10 @@ int main() {
     FILE *ifp, *ofp;
     char *str[MAXLINE];
     char s[MAXLINE];
-    
+  
+   
     int i, size;
+  
     
     ifp=fopen(IFNAME,"r");
     
@@ -29,7 +31,11 @@ int main() {
         if(fgets(s, sizeof(s), ifp)==NULL)
             break;
         if(*s !='\n')
-            str[i++] = strdup(s);
+        {
+            str[i] = strdup(s);
+            i++;
+        }
+      
     }
     size=i;
     lineSort(str, size);
@@ -37,5 +43,7 @@ int main() {
     
     fclose(ifp);
     fclose(ofp);
+    
+    free(str[i]);
     return 0;
 }

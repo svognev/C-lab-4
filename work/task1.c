@@ -29,3 +29,15 @@ void printLines(const char *pstr[],int size)
  
 
 }
+
+void printLinesToFile(const char *str[],int size, FILE *ofp)
+{
+    
+    for(int i=0;i<size;i++)
+    {
+        fprintf(ofp,"%s",str[i]);
+        //  free((char*)str[i]);
+        
+    }
+    
+}
