@@ -1,5 +1,4 @@
 
-//#define SIZE 220
-//#include<stdio.h>
-void lineSort(char *str[], int size);
-void printLines(const char *str[], int size);
+#define SIZE 220
+void lineSort(char *str[SIZE], int size);
+void printLines(const char *str[SIZE], int size);

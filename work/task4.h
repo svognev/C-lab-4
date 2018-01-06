@@ -1,6 +1,5 @@
 
-//#include "task1.h"
 #include<stdio.h>
-//#define SIZE 50
-void lineSort(char *str[], int size);
+#define SIZE 220
+void lineSort(char *str[SIZE], int size);
 void printLinesToFile(const char *str[], int size, FILE *fp);
