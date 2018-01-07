@@ -11,7 +11,17 @@ int main() {
     printf("Enter a string: \n");
     fgets(str, sizeof(str), stdin);
 
-    
-    isPalindrome(str);
+	str[strlen(str) - 1] = '\0';
+
+	if (isPalindrome(str))
+	{
+		printf("%s is palindrome\n", str);
+	}
+	else
+	{
+		printf("%s is not a palindrome\n", str);
+	}
+
+	return 0;
    
 }

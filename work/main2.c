@@ -1,5 +1,4 @@
 
-
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
@@ -7,9 +6,15 @@
 
 int main()
 {
-  char *in[N];
-  char *out[10];
-  reverseWords(*in,*out);
+	char in[N] = {0};
+	char out[N] = {0};
+
+  printf("Enter string: \n");
+  fgets(in, N, stdin);
+
+  in[strlen(in) - 1] = '\0';
+
+  reverseWords(in,out);
   return 0;
 }
             

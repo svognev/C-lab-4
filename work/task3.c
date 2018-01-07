@@ -5,29 +5,22 @@
 int isPalindrome(char *str)
 {
     int lenght;
-    int flag=0;
+    int flag=1;
     lenght=strlen(str);
     char *first=str;
-    char *last=&str[lenght-1];
+    char *last=str[lenght-1];
     
-    for(int i=0;i<=(lenght-1)/2;i++)
+    for(int i=0;i<(lenght-1)/2;i++)
     {
-        if(*(first+i) != *(last-i-1))
+      
+	if(str[i] != str[lenght-1-i])
         {
-            flag=1;
+            flag=0;
             break;
         }
     }
-    if(flag)
-    {
-        printf("%s is not a palindrome\n", str);
-    }
-    else
-    {
-        printf("%s is palindrome\n",str);
-    }
     
     
-  return 0;
+  return flag;
 
 }

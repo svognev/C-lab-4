@@ -1,17 +1,16 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include <string.h>
 #include "task2.h"
+#define N 256
 
 char *reverseWords(char *in, char *out)
 {
-    char string[]="burya mglou nebo kroet";
-    char *temp[10];
-    
-    in=0;
-    out=0;
+	
+	char *temp[10] = {0};
+
     int i=0,j=0;
-    in=string;
-    printf("%s\n",in);
+ 
 
     printf("\n");
     temp[i]=strtok(in," ");
@@ -29,6 +28,6 @@ char *reverseWords(char *in, char *out)
     }
         printf("\n");
     
-    return 0;
+    return out;
 }
 
