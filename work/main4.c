@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "task4.h"
+#include "task1.h"
 
 #define M 256
 #define N 64
