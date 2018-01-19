@@ -8,7 +8,7 @@ char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
 	char *p[SIZE];
-	char ch = " ";
+	char ch = ' ';
 	int k = 0;
 	while ( (ch=in[i]) != '\0')// count number of Symbol
 	{
@@ -57,4 +57,9 @@ char *reverseWords(char *in, char *out)
 	
 	
 	return out;
+}
+void printLines(const char str[SIZE], int size)
+{
+	
+
 }
