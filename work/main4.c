@@ -23,7 +23,7 @@ int main()
 		return 1;
 	}
 
-	while (count < N && fgets(text[count], M, inp) != '\n')
+	while (fgets(text[count], M, inp) != NULL)
 		pstr[count] = text[count++];
 			
 	fclose(inp);
