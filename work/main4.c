@@ -3,7 +3,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include"task4.h"
-#include"task1.h"
+//#include"task1.h"
 
 #define N 50
 #define M 80
