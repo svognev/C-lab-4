@@ -13,7 +13,7 @@ char * reverseWords(char * buf, char *out)
 	int i = 0, k = 0, j = 0;
 
 	len = strlen(buf);
-	buf[len - 1] = '\0 ';
+	buf[len - 1] = ' ';
 
 	while (buf[i])
 	{
