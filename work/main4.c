@@ -32,6 +32,12 @@ int main()
 	
 	outp = fopen("txtOUT.txt", "wt");
 	
+	if (outp == NULL)
+	{
+		puts("I can't open!");
+		return 1;
+	}
+	
 	printLinesToFile(pstr, count, outp);
 
 	return 0;
