@@ -11,13 +11,13 @@ int compare(const void *a, const void *b)
 		return -1;
 }
 
-void lineSort(char *str[], int count) //size >> count
+void lineSort(char *str[], int size) //size >> count
 {
-	qsort(str, count, sizeof(char*), compare);
+	qsort(str, size, sizeof(char*), compare);
 }
 
-void printLines(const char *str[], int count) //size >> count
+void printLines(const char *str[], int size) //size >> count
 {
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < size; i++)
 		printf("%s", str[i]);
 }

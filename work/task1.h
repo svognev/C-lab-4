@@ -1,2 +1,2 @@
-void lineSort(char *str[], int count);
-void printLines(const char *str[], int count);
+void lineSort(char *str[], int size);
+void printLines(const char *str[], int size);
