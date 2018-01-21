@@ -10,7 +10,7 @@ static int compare(const void *a, const void *b)
 		return -1;
 }
 
-void lineSort(char *str[], int size())
+void lineSort(char *str[], int size)
 {
 	qsort(str, size, sizeof(char*), compare);
 }
