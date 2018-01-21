@@ -15,7 +15,7 @@ int main()
 
 	lineSort(str, count);
 	printf("Your lines was sorted by length:\n");
-	printLines(str, count); 
+	printLines((const char**)str, count); 
 	
 	return 0;
 }
