@@ -4,6 +4,10 @@
  *  Created on: 9 янв. 2018 г.
  *      Author: michael
  */
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 int compare(const void *a, const void *b){
 	if (strlen(*(char**)a) > strlen(*(char**)b)){
 		return 1;
