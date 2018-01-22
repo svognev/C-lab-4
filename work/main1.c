@@ -32,5 +32,5 @@ int main (){
 	lineSort(pointers, count);
 	printLines(pointers, count);
 
-	return 1;
+	return 0;
 }

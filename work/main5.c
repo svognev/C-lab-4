@@ -58,5 +58,5 @@ int main(){
 	puts("Oldest");
 	puts(old_p);
 
-	return 1;
+	return 0;
 }

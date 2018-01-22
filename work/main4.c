@@ -42,5 +42,5 @@ int main (){
 	lineSort(pointers, count);
 	printLinesToFile(pointers, count, fp);
 	fclose(fp);
-	return 1;
+	return 0;
 }
