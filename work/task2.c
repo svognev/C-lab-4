@@ -10,7 +10,7 @@ char *reverseWords(char *in, char *out)
 	char *p[SIZE];
 	char ch = ' ';
 	int k = 0;
-	while ( (ch=in[i]) != '\0')// count number of Symbol
+	while ( (ch=*(in+i)) != '\0')// count number of Symbol
 	{
 		if (ch == ' '|| ch=='\n')
 		{
