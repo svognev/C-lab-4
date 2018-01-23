@@ -12,4 +12,7 @@
 
 #endif /* TASK4_H_ */
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void printLinesToFile(const char *str[],int size, FILE *fp);
