@@ -47,7 +47,7 @@ char * reverseWords(char * in, char *out)
 			j++;
 			k++;
 		}
-		else if (arr[count][k] == ' ' && flag == IN)
+		else if (arr[count][k] == ' ' && flag == IN && count)
 		{
 			flag = OUT;
 			out[j] = ' ';
@@ -55,7 +55,14 @@ char * reverseWords(char * in, char *out)
 			j++;
 			k = 0;
 		}
-		else if (arr[count][k] == '\0' && flag == IN)
+		else if (arr[count][k] == ' ' && flag == IN && !count)
+		{
+			flag = OUT;
+			count--;
+			j++;
+			k = 0;
+		}
+		else if (!(arr[count][k]) && (flag == IN))
 		{
 			flag = OUT;
 			out[j] = ' ';
