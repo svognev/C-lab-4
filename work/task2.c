@@ -30,7 +30,7 @@ char * reverseWords(char * in, char *out){
 	}
 	pointers[p][1] = in+i-1;
 
-	count -= 2;
+	count--;
 	int j = 0;
 	while(count>=0){
 		for(int i = 0; i < pointers[count][1]-pointers[count][0]; i++){
