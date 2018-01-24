@@ -43,7 +43,7 @@ char * reverseWords(char * buf, char *out)
 		}
 		out[k] = ' ';
 	}
-	out[k + 1] = '\0';
+	out[k - 1] = '\0';
 
 	return out;
 }
