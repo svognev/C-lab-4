@@ -58,6 +58,7 @@ char * reverseWords(char * in, char *out)
 		else if (arr[count][k] == ' ' && flag == IN && !count)
 		{
 			flag = OUT;
+			out[j] = '\0';
 			count--;
 			j++;
 			k = 0;
