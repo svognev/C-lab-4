@@ -4,8 +4,11 @@
 #define SIZEM 64
 #define SIZES 1024
 
+
+
 int main()
 {
+	int count = 0;
 	char buf[SIZEM][SIZES];	//Двумерный массив char
 	char *pbuf[SIZEM];	//Массив указателей на массивы char
 
@@ -13,14 +16,16 @@ int main()
 	{
 		printf("Enter a string for analysis: ");
 		fgets(buf[i], SIZES - 1, stdin);
-		if (strlen(buf[i]) == 0)
+		buf[i][strlen(buf[i]) - 1] = '\0';
+		if (strlen(buf[i]) == '\0')
 		{
 			break;
 		}
-		*pbuf[i] = &buf[i];
+		pbuf[i] = buf[i];	//Записываем в элемент i массива указателей pbuf адрес массива buf[i]
+		count++;
 	}
-	
-
+	lineSort(pbuf, count);	
+	printLines(pbuf, count);
 	return 0;
-
 }
+
