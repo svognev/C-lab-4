@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "task3.h"
-#define N 30
+#define N 128
 
 int main()
 {

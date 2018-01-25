@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "task4.h"
-#define N 50
-#define M 100
+#define N 128
+#define M 128
 
 int main()
 {

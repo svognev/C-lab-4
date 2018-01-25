@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define M 30
+#define M 128
 #define IN 1
 #define OUT 0
 
@@ -33,15 +33,19 @@ char *reverseWords(char *in, char *out)
 
 	for (k = j - 1; k >= 0; k--)
 	{
-		while (*words[k] != ' ' && *words[k] != '\n')
+		while (*words[k] != ' ' && *words[k] != '\0')
 		{
 			*(out + i) = *words[k];
 			i++;
 			*(words[k]++);
 		}
-		*(out + i) = ' ';
-		i++;
+		if (k > 0)
+		{
+			*(out + i) = ' ';
+			i++;
+		}
 	}
-	*(out + i - 1) = '\0';
+	*(out + i) = '\0';
+
 	return out;
 }

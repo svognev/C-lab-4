@@ -4,7 +4,6 @@
 int isPalindrome(char *str) 
 {
 	char *str_end = str + strlen(str) - 1;
-	int i = 0, j = 0;
 
 	while (str < str_end)
 	{

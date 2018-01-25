@@ -10,6 +10,8 @@ int main()
 
 	printf("Enter a string, please:\n");
 	fgets(in, N, stdin);
+	if (in[strlen(in) - 1] == '\n');
+		in[strlen(in) - 1] = '\0';
 
 	printf("Your string is reversed:\n");
 	printf("%s\n", reverseWords(in, out));
