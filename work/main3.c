@@ -11,13 +11,13 @@ int main()
 	printf("Enter a string for analysis: ");
 	fgets(str, SIZE - 1, stdin);
 
-	if (isPalindrome(*str))
+	if (isPalindrome(str) == 1)
 	{
-		printf("The string is a palindrome");
+		printf("The string is a palindrome\n");
 	}
 	else
 	{
-		printf("The string is not a palindrome");
+		printf("The string is not a palindrome\n");
 	}
 	return 0;
 }
