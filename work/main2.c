@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+//#include <string.h>
 #include "task2.h"
 
 int main(){
@@ -16,6 +17,6 @@ int main(){
 	fgets(str, 128, stdin);
 
 	puts(reverseWords(str, reversed_str));
-
+//	printf("%ld - %ld", strlen(str), strlen(reversed_str));
 	return 0;
 }
