@@ -11,39 +11,44 @@ char * reverseWords(char * buf, char *out)
 	int len = 0, len1 = 0;
 	int inWord = 0;
 	int i = 0, k = 0, j = 0;
-
-	len = strlen(buf);
-	buf[len - 1] = ' ';
-
+	
 	while (buf[i])
 	{
 		if (buf[i] != ' ' && inWord == 0)
 		{
 			inWord = 1;
 			word[j] = &buf[i];
+			j++;
 		}
-		else if (buf[i] == ' ' && inWord == 1)
+		else if (buf[i] == ' ')
 		{
 			inWord = 0;
-			j++;
 		}
 		i++;
 	}
 			
+	/*printf("j=%d\n", j);
+	for (i = 0; i < j; i++)
+	{
+		printf("word %s\n", word[i]);
+	}*/
+
 	while (j--)
 	{
-		len1 = 0;
-		if (*word[j] != ' ') 
+		while (*word[j] != ' ')
 		{
-			len1 = strlen(word[j]);
-			for (k; k < len1; k++)
-			{
-				out[k] = *word[j];
-				*(word[j]++);
-			}
+			if (*word[j] == '\0')
+				break;
+
+			out[k] = *word[j];
+			*(word[j]++);
+			k++;
 		}
+		out[k] = ' ';
+		k++;
 	}
-	out[k-1] = '\0';
+
+	out[strlen(out)-1] = '\0';
 
 	return out;
 }
