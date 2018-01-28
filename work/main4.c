@@ -5,18 +5,25 @@
 #include <string.h>
 #include <malloc.h>
 #include "task4.h"
-//#include "task1.h"
+#include "task1.h"
 #define SIZEM 64
 #define LSTR 512
 
-
-int main()
+/* argc хранит количество параметров, а argv[] указатели на эти параметры.
+Например, если мы запустим исполняемый файл "fgets_example param1 param2", 
+то argc будет равно 3, а argv[] = {"fgets_example", "param1", "param2"}*/
+int main(int argc, char* argv[])	
 {
+	/*char fin[] = argv[0];//Файл для чтения
+	char fout[] = argv[1];//Файл для записи
+	*/
+
 	FILE *mf;	
-	char *str[SIZEM];	//Массив указателей на строки				
-	if ((mf = fopen("test.txt", "r")) == NULL) //Проверка наличия файла и его открытия
+	char *str[SIZEM];	//Массив указателей на строки
+	mf = fopen("test.txt", "r");
+	if (mf == NULL) //Проверка наличия файла и его открытия
 	{ 
-		printf("error\n"); 
+		printf("error open\n"); 
 		return -1; 
 	}
 	int i;	//Счётчик прочитанных строк
@@ -32,7 +39,7 @@ int main()
 			if (feof(mf) != 0)
 			{
 				//Если файл закончился, выводим сообщение о завершении чтения и выходим из бесконечного цикла
-				printf("\nЧread end\n");
+				printf("\nread end\n");
 				break;
 			}
 			else
@@ -41,39 +48,21 @@ int main()
 				printf("\nerr read\n");
 				break;
 			}
-		}			
-		else
-		{
-			i++;
-		}
+		}	
 	}
 	//Закрываем файл
-	printf("close file : ");
+	printf("close file\n");
 	if (fclose(mf) == EOF)
 	{
-		printf("error\n");
+		printf("error close file\n");
 	}
 	lineSort(str, i);
-	//mf = fopen("test.txt", "w");	//Открытие файла в который будет производиться запись
+	mf = fopen("test1.txt", "w");
+	if (mf == NULL)
+	{
+		printf("error open file\n");
+		return -1;
+	}
 	printLinesToFile(str, i, mf);
 	return 0;
-}
-
-void lineSort(char *str[], int size)
-{
-	for (int i = 0; i < size; i++)
-	{
-		char *tmp;
-		int minPosition = i;
-		for (int j = i + 1; j < size; j++)
-		{
-			if (strlen(str[minPosition]) > strlen(str[j]))
-			{
-				minPosition = j;
-			}
-		}
-		tmp = str[minPosition];
-		str[minPosition] = str[i];
-		str[i] = tmp;
-	}
 }

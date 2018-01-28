@@ -7,16 +7,11 @@
 
 void printLinesToFile(const char *str[], int size, FILE *fp)
 {
-	if ((fp = fopen("test.txt", "w")) == NULL)
+	for (int i = 0; i < size; i++)
 	{
-		printf("Файл невозможно открыть или создать\n");
-	}
-	else 
-	{
-		for (int i = 0; i < size; i++) 
-		{
-			fwrite(str[i],  sizeof(char), LSTR, fp);
-		}
+		fwrite(str[i], sizeof(char), strlen(str[i]), fp);
+		fputc('\n', fp);
 	}
 	fclose(fp);
 }
+
