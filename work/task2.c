@@ -29,10 +29,11 @@ char * reverseWords(char * buf, char *out)
 		}
 		i++;
 	}
+			
 	while (j--)
 	{
 		len1 = 0;
-		if (*word[j] != ' ')
+		if (*word[j] != ' ') 
 		{
 			len1 = strlen(word[j]);
 			for (k; k < len1; k++)
@@ -41,9 +42,8 @@ char * reverseWords(char * buf, char *out)
 				*(word[j]++);
 			}
 		}
-		out[k] = ' ';
 	}
-	out[k - 1] = '\0';
+	out[k-1] = '\0';
 
 	return out;
 }
