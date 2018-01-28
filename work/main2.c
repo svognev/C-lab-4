@@ -8,12 +8,12 @@
 
 int main()
 {
-	char buf[N];
+	char buf[N] = { 0 };
 	char out[N];
-	
+
 	printf("Enter line \n");
 	fgets(buf, N, stdin);
-	
-	printf("%s\n", reverseWords(buf, out));
+	buf[strlen(buf)] = '\0';
+	printf("%s", reverseWords(buf, out));
 	return 0;
 }
