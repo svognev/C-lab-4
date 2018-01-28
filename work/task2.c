@@ -1,17 +1,20 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include <string.h>
 #include "task2.h"
 #define N 256
 
+
 char *reverseWords(char *in, char *out)
 {
-	
-	char *temp[10] = {0};
-
+    
+    char *temp[10] = {0};
+    
     int i=0,j=0;
+    char *p_out=out;
+    char *p_temp=NULL;
+   
  
-
+    
     printf("\n");
     temp[i]=strtok(in," ");
     i++;
@@ -21,13 +24,16 @@ char *reverseWords(char *in, char *out)
         temp[i]=strtok(NULL," ");
         i++;
     }
-   
+  
     for(j=(i-2);j>=0;j--)
-    {   out=temp[j];
-        printf("%s ",out);
+    {
+        p_temp=temp[j];
+        while (*p_temp!=' ' && *p_temp!='\0')
+            *p_out++=(*p_temp++);
+            *p_out++=' ';
     }
-        printf("\n");
+    *p_out='\0';
     
+
     return out;
 }
-
