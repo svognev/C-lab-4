@@ -13,7 +13,7 @@ int main()
 
 	printf("Enter line \n");
 	fgets(buf, N, stdin);
-	buf[strlen(buf)] = '\0';
+	buf[strlen(buf)-1] = '\0';
 	printf("%s", reverseWords(buf, out));
 	return 0;
 }
