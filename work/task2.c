@@ -48,7 +48,7 @@ char * reverseWords(char * buf, char *out)
 		k++;
 	}
 
-	out[strlen(out)-1] = '\0';
+	out[strlen(out)] = '\0';
 
 	return out;
 }
