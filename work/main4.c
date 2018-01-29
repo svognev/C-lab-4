@@ -10,36 +10,42 @@
 
 int main(int argc, char * argv[])	
 {
-	char fin[32] = { 0 };
-	char fout[32] = { 0 };
+	char fin[256] = { 0 };
+	char fout[256] = { 0 };
 	
-	if (argc == 2)
+	switch (argc)
+	{
+	case 2:
 	{
 		strcpy(fin, argv[1]);
 		strcpy(fout, argv[1]);
+		break;
 	}
-	else if (argc == 3)
+	case 3:
 	{
 		strcpy(fin, argv[1]);
 		strcpy(fout, argv[2]);
+		break;
 	}
-	else if (argc != 2 && argc != 3)
+	default:
 	{
 		strcpy(fin, "test.txt");
 		strcpy(fout, "test1.txt");
-	}
+		break;
 
+	}
+	}
 
 	FILE *mf;	
 	char *str[SIZEM];	//Массив указателей на строки	
 	mf = fopen(fin, "r");
 	if (mf == NULL) //Проверка наличия файла и его открытия
 	{ 
-		printf("error open\n"); 
+		printf("error open file in\n"); 
 		return -1; 
 	}
 	int i;	//Счётчик прочитанных строк
-	for(i = 0; i < 64; i++)
+	for(i = 0; i < SIZEM; i++)
 	{
 		char *stroka;	//Указатель на строку
 		stroka = (char*)malloc(LSTR * sizeof(char));	//Выделяем память под строку и записываем адрес в указатель		
@@ -52,28 +58,28 @@ int main(int argc, char * argv[])
 			if (feof(mf) != 0)
 			{
 				//Если файл закончился, выводим сообщение о завершении чтения и выходим из бесконечного цикла
-				printf("\nread end\n");
+				printf("read end file in\n");
 				break;
 			}
 			else
 			{
 				//Если при чтении произошла ошибка, выводим сообщение об ошибке и выходим из бесконечного цикла
-				printf("\nerr read\n");
+				printf("err read file in\n");
 				break;
 			}
 		}	
 	}
 	//Закрываем файл
-	printf("close file\n");
+	printf("close file in\n");
 	if (fclose(mf) == EOF)
 	{
-		printf("error close file\n");
+		printf("error close file in\n");
 	}
 	lineSort(str, i);
 	mf = fopen(fout, "w");
 	if (mf == NULL)
 	{
-		printf("error open file\n");
+		printf("error open file out\n");
 		return -1;
 	}
 	printLinesToFile(str, i, mf);

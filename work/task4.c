@@ -4,7 +4,6 @@
 #include <string.h>
 #define LSTR 512
 
-
 void printLinesToFile(const char *str[], int size, FILE *fp)
 {
 	for (int i = 0; i < size; i++)
@@ -17,6 +16,9 @@ void printLinesToFile(const char *str[], int size, FILE *fp)
 			fputc('\n', fp);
 		}*/
 	}
-	fclose(fp);
+	if (fclose(fp) == EOF)
+	{
+		printf("error close file out\n");
+	}
 }
 
