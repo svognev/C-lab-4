@@ -1,7 +1,10 @@
 #include<stdio.h>
 #include<string.h>
 #include "task3.h"
-int isPalindrome(char *str)
+#define SIZE 50;
+#define OUT 0;
+#define IN 1;
+int isPalindrome(char * str)
 {
 	int len,j,i=0,flag=OUT;
 	len = strlen(str);

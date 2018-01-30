@@ -16,7 +16,7 @@ int compare(const void *a,const void *b)
 	else
 		return -1;
 }
-void lineSort(char *str[SIZE], int size)
+void lineSort(char *str[], int size)
 {
 	qsort(str, size,sizeof(char **), compare);//base functi0n quick sort
 }

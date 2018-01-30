@@ -4,6 +4,7 @@
 #include<string.h>
 #define OUT 0
 #define IN 1
+#define SIZE 100 
 char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
@@ -25,7 +26,7 @@ char *reverseWords(char *in, char *out)
 		}
 		i++;
 	}
-	p[len] = '\0';// replace the last string in array 'out' for ease work
+	p[len] = NULL;// replace the last string in array 'out' for ease work
 	len--;
 	j = i - 1;
 	i = 0;

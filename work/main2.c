@@ -1,3 +1,4 @@
+#include "task2.h"
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 100
