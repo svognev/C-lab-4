@@ -9,6 +9,7 @@ int main()
 	char out[SIZE] = {0};
 	printf("Enter line of word:\n");
 	fgets(in, sizeof(in), stdin);//record string in array
+	//char *in1 = "mad max";//for test
 	reverseWords(in, out);// rewerse of words
 	printf("%s\n",out);
 	

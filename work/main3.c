@@ -11,6 +11,7 @@ int main()
 	fgets(buf,SIZE,stdin);// record the string in array 'buf'
 	buf[strlen(buf)-1] = '\0';
 	str = buf;
+	//str = "My NameemaN yM";
 	if ((isPalindrome(str)) > 0)
 	{
 			printf("The string is a paliondrome\n");

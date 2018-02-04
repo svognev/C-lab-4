@@ -22,11 +22,7 @@ int isPalindrome(char * str)
 	}
 
 	if (flag == 0)
-	{
 		return 0;
-	}
 	else
-	{
 		return 1;
-	}
 }

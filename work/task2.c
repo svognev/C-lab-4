@@ -8,14 +8,18 @@
 char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
+	
 	char *p[SIZE];
-	char ch = ' ';
+
+	char ch = 0;
+	char *buf = (char*)malloc(strlen(in)*sizeof(char));
 	int k = 0;
-	while ( (ch=in[i]) != '\0')// count number of Symbol
+	strcpy(buf, in);
+	while ( (ch=buf[i]) != '\0')// count number of Symbol
 	{
 		if (ch == ' '|| ch=='\n')
 		{
-			in[i] = '\0';//replace every gap to '\0' for  ease work with pointers
+			buf[i] = NULL;//replace every gap to '\0' for  ease work with pointers
 			inWord = OUT;
 		}
 		else
@@ -33,12 +37,12 @@ char *reverseWords(char *in, char *out)
 	inWord = 0;
 	while (i<=j)//collect an array of pointers in reveerse order
 	{
-		if (in[i]!='\0')
+		if (buf[i]!='\0')
 		{
 			inWord++;
 			if (inWord == 1)
 			{
-				p[len] = &in[i];//the  first of letter each word = pointer
+				p[len] = &buf[i];//the  first of letter each word = pointer
 				len--;
 			}
 		}
@@ -56,7 +60,7 @@ char *reverseWords(char *in, char *out)
 	}
 	out[--k] = '\0';
 	
-	
+	free(buf);
 	return out;
 }
 void printLines(const char str[SIZE], int size)
