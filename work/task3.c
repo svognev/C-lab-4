@@ -10,7 +10,7 @@ int isPalindrome(char * str)
 	while (i < j)
 	{
 		if (str[i++] != str[j--])
-			return 1;
+			return 0;
 	}
-	return 0;
+	return 1;
 }

@@ -6,13 +6,12 @@
 
 int main()
 {
-	char str[SIZE] = { 0 };
-
+	char str[SIZE] = {"abba abba" };
 	printf("Enter a line please:\n");
 	fgets(str, SIZE, stdin);
 	if (str[strlen(str) - 1] == '\n')
 		str[strlen(str) - 1] = '\0';
-	if (isPalindrome(str) == 0)
+	if (isPalindrome(str) == 1)
 		printf("String is palindrome\n");
 	else
 		printf("String isn't palindrome\n");
