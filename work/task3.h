@@ -1,0 +1,2 @@
+
+int isPalindrome(char * str);
