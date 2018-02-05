@@ -10,7 +10,7 @@
 int main()
 {
 	int i = 0,j=0,countN=0;
-	int flagEnt = OUT;// flag end of entered lines
+	//int flagEnt = OUT;// flag end of entered lines
 	char *p[SIZE];
 	char str[SIZE][SIZE] = { ' ' };
 	
@@ -18,11 +18,12 @@ int main()
 	
 	while (countN<=0 && *(p[i]=fgets(str[i],SIZE,stdin))!=EOF)
 	{
-		
 		if (*str[i] == '\n')
 			countN++;
 		else
 			countN = 0;
+
+		str[i][strlen(str[i]) - 1] = '\0';
 		i++;
 	}
 
