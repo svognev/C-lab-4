@@ -22,9 +22,7 @@ void lineSort(char *str[], int size)
 }
 void printLines(const char *str[], int size)
 {
-	for (int i = 0;i < size;i++)
-		if (str[i][strlen(str[i]) - 1] == '\n')
-			fputs(str[i], stdout);
-		else
-			puts(str[i]);
+	for (int i = size-1; i>=0;i--)
+		printf("%s", str[i]);
 }
+		
