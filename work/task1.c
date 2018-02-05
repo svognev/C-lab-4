@@ -18,11 +18,11 @@ int compare(const void *a,const void *b)
 }
 void lineSort(char *str[], int size)
 {
-	qsort(str, size,sizeof(char **), compare);//base functi0n quick sort
+	qsort(str, size,sizeof(char *), compare);//base functi0n quick sort
 }
 void printLines(const char *str[], int size)
 {
-	for (int i = (size-1); i>=0;i--)
+	for (int i = 0); i<size;i++)
 		printf("%s\n", str[i]);
 }
 		
