@@ -1,27 +1,26 @@
-#define IN 1
-#define OUT 0
-
 char * reverseWords(char * in, char *out)	//функция, переворачивающая слова из in и записывающую их в out
 {
 	char *arrp[64];	//Массив указателей на char
-	int flag = OUT;
+	int flag = 0;
 	int count = 0;	//Количество слов == количество элементов *arrp[]
-
-	in[strlen(in) - 1] = '\0';	//Заменяем '\n' на '\0'
+	if (in[strlen(in) - 1] == '\n')
+	{
+		in[strlen(in) - 1] = '\0';	//Заменяем '\n' на '\0'
+	}
 	//-----------------------------------------------------------------
 
 	//Находим и записываем первые символы всех слов в массив указателей
 	for (int i = 0; in[i] != 0; i++)
 	{
-		if (in[i] != ' ' && flag == OUT)
+		if (in[i] != ' ' && flag == 0)
 		{
-			flag = IN;
+			flag = 1;
 			arrp[count] = &in[i];
 			count++;
 		}
-		else if (in[i] == ' ' && flag == IN)
+		else if (in[i] == ' ' && flag == 1)
 		{
-			flag = OUT;
+			flag = 0;
 		}
 	}
 	//-----------------------------------------------------------------
@@ -34,7 +33,7 @@ char * reverseWords(char * in, char *out)	//функция, переворачивающая слова из i
 		{
 			out[k] = arrp[i][j];
 			k++;
-			if (((arrp[i][j+1] == ' ') || (arrp[i][j+1] == '\0')) && (i - 1 >= 0))
+			if (((arrp[i][j + 1] == ' ') || (arrp[i][j + 1] == '\0')) && (i - 1 >= 0))
 			{
 				out[k] = ' ';
 				k++;

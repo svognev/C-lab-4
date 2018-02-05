@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define LSTR 512
 
 void printLinesToFile(const char *str[], int size, FILE *fp)
 {

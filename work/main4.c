@@ -30,7 +30,7 @@ int main(int argc, char * argv[])
 	default:
 	{
 		strcpy(fin, "test.txt");
-		strcpy(fout, "test1.txt");
+		strcpy(fout, "test.txt");
 		break;
 
 	}
@@ -58,7 +58,7 @@ int main(int argc, char * argv[])
 			if (feof(mf) != 0)
 			{
 				//Если файл закончился, выводим сообщение о завершении чтения и выходим из бесконечного цикла
-				printf("read end file in\n");
+				//printf("read end file in\n");
 				break;
 			}
 			else
@@ -70,7 +70,7 @@ int main(int argc, char * argv[])
 		}	
 	}
 	//Закрываем файл
-	printf("close file in\n");
+	//printf("close file in\n");
 	if (fclose(mf) == EOF)
 	{
 		printf("error close file in\n");

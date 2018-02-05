@@ -5,12 +5,22 @@
 //Сортировка 
 void lineSort(char *str[], int size)
 {
+	//Очищаем строки от '\0'
+	for (int i = 0; i < size; i++)
+	{
+		if (str[strlen(str[i]) - 1] == '\n')
+		{
+			str[i][strlen(str[i]) - 1] = '\0';
+		}
+	}
+	//Осуществляем сортировку
 	for (int i = 0; i < size; i++)
 	{
 		char *tmp;
 		int minPosition = i;
 		for (int j = i + 1; j < size; j++)
 		{
+
 			if (strlen(str[minPosition]) > strlen(str[j]))
 			{
 				minPosition = j;

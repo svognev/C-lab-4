@@ -2,8 +2,11 @@
 int isPalindrome(char * str)	//функция, проверяющая str (ответ либо 0, либо 1)
 {
 	int len = strlen(str);
-	str[len - 1] = '\0';	//Заменяем '\n' на '\0'
-	len--;
+	if(str[len - 1] == '\n');	//Заменяем '\n' на '\0'
+	{
+		str[len - 1] = '\0';	//Заменяем '\n' на '\0'
+	}
+	len = strlen(str);
 	char *levP;	//Указатель на первый элемент строки
 	char *praP;	//Указатель на последний элемент строки
 	levP = &(str[0]);
@@ -19,13 +22,13 @@ int isPalindrome(char * str)	//функция, проверяющая str (ответ либо 0, либо 1)
 			}
 		}
 		//Пропускаем пробелы и другие знаки препинания
-		if (*levP == ' ' || *levP == ',' || *levP == '.' || *levP == "'" || *levP == "?" || *levP == "!")
+		if ((*levP) == ' ' || (*levP) == ',' || (*levP) == '.' || (*levP) == '\'' || (*levP) == '?' || (*levP) == '!')
 		{
 			levP++;
 			continue;
 		}
 		//Пропускаем пробелы
-		if (*praP == ' ' || *praP == ',' || *praP == '.' || *praP == "'" || *praP == "?" || *praP == "!")
+		if ((*praP) == ' ' || (*praP) == ',' || (*praP) == '.' || (*praP) == '\'' || (*praP) == '?' || (*praP) == '!')
 		{
 			praP--;
 			continue;

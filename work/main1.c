@@ -17,10 +17,6 @@ int main()
 		printf("Enter a string for analysis: ");
 		fgets(buf[i], SIZES - 1, stdin);
 		buf[i][strlen(buf[i]) - 1] = '\0';
-		if (strlen(buf[i]) == '\0')
-		{
-			break;
-		}
 		pbuf[i] = buf[i];	//Записываем в элемент i массива указателей pbuf адрес массива buf[i]
 		count++;
 	}
