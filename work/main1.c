@@ -26,8 +26,7 @@ int main()
 		str[i][strlen(str[i]) - 1] = '\0';
 		i++;
 	}
-
-	
+	p[--i] = '\0';
 	lineSort(p, i);
 	printLines(p,i );
 	return 0;
