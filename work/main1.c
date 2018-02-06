@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "task1.h"
 #define SIZEM 64
 #define SIZES 1024
 

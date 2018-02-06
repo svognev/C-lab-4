@@ -1,3 +1,7 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 char * reverseWords(char * in, char *out)	//функция, переворачивающая слова из in и записывающую их в out
 {
 	char *arrp[64];	//Массив указателей на char

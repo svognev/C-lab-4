@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /*http://vscode.ru/prog-lessons/sortirovka-metodom-vyibora-na-yazyike-si.html*/

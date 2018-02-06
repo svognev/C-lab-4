@@ -1,3 +1,6 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int isPalindrome(char * str)	//функци€, провер€юща€ str (ответ либо 0, либо 1)
 {
