@@ -1,6 +1,6 @@
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char * reverseWords(char * in, char *out)	//функция, переворачивающая слова из in и записывающую их в out
 {

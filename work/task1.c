@@ -9,7 +9,7 @@ void lineSort(char *str[], int size)
 	//Очищаем строки от '\0'
 	for (int i = 0; i < size; i++)
 	{
-		if (str[strlen(str[i]) - 1] == '\n')
+		if (str[i][strlen(str[i]) - 1] == '\n')
 		{
 			str[i][strlen(str[i]) - 1] = '\0';
 		}

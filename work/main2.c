@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "task2.h"
 #define SIZE 1024
 
 
 int main()
 {
 	int count = 0;
+
 	char in[SIZE];	//Массив char исходный
 	char out[SIZE];	//Массив char конечный
 	//Организация ввода

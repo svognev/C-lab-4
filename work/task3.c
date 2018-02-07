@@ -1,11 +1,11 @@
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int isPalindrome(char * str)	//функция, проверяющая str (ответ либо 0, либо 1)
 {
 	int len = strlen(str);
-	if(str[len - 1] == '\n');	//Заменяем '\n' на '\0'
+	if(str[len - 1] == '\n')
 	{
 		str[len - 1] = '\0';	//Заменяем '\n' на '\0'
 	}
@@ -19,7 +19,7 @@ int isPalindrome(char * str)	//функция, проверяющая str (ответ либо 0, либо 1)
 		//Переводим все буквы в нижний регистр
 		for (int i = 0; i <= len; i++)
 		{
-			if (str[i] > 64 && str[i] < 91)
+			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
 				str[i] = str[i] + 32;
 			}

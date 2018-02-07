@@ -9,6 +9,11 @@ void printLinesToFile(const char *str[], int size, FILE *fp)
 	{
 		fwrite(str[i], sizeof(char), strlen(str[i]), fp);
 		fputc('\n', fp);
+		/*if (strlen(str[i]) >= 1)
+		{
+			fwrite(str[i], sizeof(char), strlen(str[i]), fp);
+			fputc('\n', fp);
+		}*/
 	}
 	if (fclose(fp) == EOF)
 	{
