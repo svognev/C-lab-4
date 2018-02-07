@@ -11,8 +11,6 @@ int main()
 {
 	int count = 0;
 	char buf[SIZEM][SIZES];	//Двумерный массив char
-	//char buf[][250] = { {"stroke #1 s 0 and n\n"}, {"stroka tolko 0\0"}, {"stroka tolko n\n"}, {"\0"} };	//Двумерный массив char
-
 	char *pbuf[SIZEM];	//Массив указателей на массивы char
 
 	for (int i = 0; i < SIZEM; i++)

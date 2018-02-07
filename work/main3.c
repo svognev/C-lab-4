@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "task3.h"
 #define SIZE 1024
 
 int main()
