@@ -38,8 +38,8 @@ int main()
 		
 		if (i == 0)
 		{
-			young = &(arr[i]);
-			old = &(arr[i]);
+			young = arr[i];
+			old = arr[i];
 			youngAge = inAge;
 			oldAge = inAge;
 		}
@@ -47,12 +47,12 @@ int main()
 		{
 			if (inAge > oldAge)
 			{
-				old = &(arr[i]);
+				old = arr[i];
 				oldAge = inAge;
 			}
 			else if (inAge < youngAge)
 			{
-				young = &(arr[i]);
+				young = arr[i];
 				youngAge = inAge;
 			}
 		}
