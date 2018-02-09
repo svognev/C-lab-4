@@ -1,1 +1,4 @@
-void printLinesToFile(const char *str[], int size, FILE *fp);	//функция, печатающая строки в порядке массива str
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void printLinesToFile(const char *str[], int size, FILE *fp);	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ str

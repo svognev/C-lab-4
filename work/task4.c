@@ -15,9 +15,11 @@ void printLinesToFile(const char *str[], int size, FILE *fp)
 			fputc('\n', fp);
 		}*/
 	}
+	/*
 	if (fclose(fp) == EOF)
 	{
 		printf("error close file out\n");
 	}
+	*/
 }
 
