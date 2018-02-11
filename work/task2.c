@@ -6,14 +6,11 @@
 
 char *reverseWords(char *in, char *out)
 {
-    
     char *temp[10] = {0};
     
     int i=0,j=0;
     char *p_out=out;
     char *p_temp=NULL;
-   
- 
     
     printf("\n");
     temp[i]=strtok(in," ");
@@ -32,8 +29,9 @@ char *reverseWords(char *in, char *out)
             *p_out++=(*p_temp++);
             *p_out++=' ';
     }
-    *p_out='\0';
-    
 
+ //   *p_out='\0';
+    p_out[j]='\0';
+    
     return out;
 }
