@@ -16,7 +16,7 @@ int main(){
 	printf("Enter string\n");
 	fgets(str, 128, stdin);
 
-	puts(reverseWords(str, reversed_str));
+	printf(reverseWords(str, reversed_str));
 
 	return 0;
 }
