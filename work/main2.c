@@ -15,8 +15,9 @@ int main(){
 	char reversed_str[128];
 	printf("Enter string\n");
 	fgets(str, 128, stdin);
+	str[strlen(str)-1] = '\0';
 
-	printf(reverseWords(str, reversed_str));
+	printf(reverseWords(str,reversed_str));
 
 	return 0;
 }

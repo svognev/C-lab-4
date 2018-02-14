@@ -4,33 +4,26 @@
  *  Created on: 11 янв. 2018 г.
  *      Author: michael
  */
-
+#include <string.h>
 
 char * reverseWords(char * in, char *out){
 	char *pointers[64][2];
 
-	int i = 0;
 	int count = 0;
 	int in_word = 0;
-	int p = -1;
-	while (in[i]){
-		if( in_word==0 && in[i]!=' '){
+
+	for (int i=0; i <= strlen(in); i++){
+		if (in_word==0 && in[i] != ' '){
 			in_word = 1;
-			p++;
-			pointers[p][0] = in+i;
-			count++;
-			i++;
-		}else if( in_word && in[i]==' '){
+			pointers[count][0] = in + i;
+		}else if (in_word==1 && (in[i] == ' ' || in[i] == '\0')){
 			in_word = 0;
-			pointers[p][1] = in+i;
-			i++;
-		}else{
-			i++;
+			pointers[count][1] = in + i;
+			count++;
 		}
 	}
-	pointers[p][1] = in+i-1;
-
 	count--;
+
 	int j = 0;
 	while(count>=0){
 		for(int i = 0; i < pointers[count][1]-pointers[count][0]; i++){
